@@ -12,11 +12,17 @@ class PostController {
    */
   protected $db;
 
+   /**
+   * @var Logger
+   */
+  protected $log;
+
   /**
    * @param IDbAdapter $dbAdapter
    */
   public function __construct(IDbAdapter $dbAdapter, Logger $log) {
     $this->db = $dbAdapter;
+    $this->log = $log;
   }
 
   /**
